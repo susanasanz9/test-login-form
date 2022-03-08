@@ -9,11 +9,13 @@
 			<div class="inputs-container">
 
 				<app-input-form [inputLabel]="'Email'"
-								formControlName="email">
+								formControlName="email"
+								[iconClass]="'fa-regular fa-user'">
 				</app-input-form>
 				<app-input-form [inputLabel]="'Contraseña'"
 								formControlName="password"
-								[inputType]="'password'">
+								[inputType]="'password'"
+								[iconClass]="'fa-solid fa-lock'">
 				</app-input-form>
 
 				<div class="toggle-group">

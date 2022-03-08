@@ -1,5 +1,8 @@
 <div class="input-form-group">
+	<i *ngIf="hasIcon"
+	   [class]="iconClass"></i>
 	<input class="input-form"
+		   [ngClass]="{'with-icon': hasIcon }"
 		   [value]="value"
 		   [type]="inputType"
 		   (input)="onInput(inputEl.value)"

@@ -17,6 +17,8 @@ export class InputFormComponent implements OnInit, ControlValueAccessor {
 
   @Input() inputLabel: string = '';
   @Input() inputType: string = 'text'; // TODO: create an enum
+  @Input() iconClass: string = '';
+  hasIcon: boolean = true;
 
   value: string = '';
   isDisabled: boolean = false;
@@ -27,6 +29,7 @@ export class InputFormComponent implements OnInit, ControlValueAccessor {
   constructor() { }
 
   ngOnInit() {
+    this.hasIcon = (this.iconClass.length !== 0);
   }
 
   onInput(value: string) {
