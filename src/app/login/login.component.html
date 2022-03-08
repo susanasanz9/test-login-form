@@ -6,28 +6,33 @@
 		<form class="login-form"
 			  [formGroup]="loginForm"
 			  (ngSubmit)="onSubmit()">
+			<div class="inputs-container">
 
-			<app-input-form [inputLabel]="'Email'"
-							formControlName="email">
-			</app-input-form>
-			<app-input-form [inputLabel]="'Password'"
-							formControlName="password"
-							[inputType]="'password'">
-			</app-input-form>
+				<app-input-form [inputLabel]="'Email'"
+								formControlName="email">
+				</app-input-form>
+				<app-input-form [inputLabel]="'Contraseña'"
+								formControlName="password"
+								[inputType]="'password'">
+				</app-input-form>
 
-			<div class="form-group">
-				<app-toggle></app-toggle>
-				<!-- <label class="switch">
+				<div class="toggle-group">
+
+					<p>Recordar</p>
+					<app-toggle></app-toggle>
+					<!-- <label class="switch">
 					<input type="checkbox"
 						   formControlName="remember"
 						   checked>
 					<span class="slider round"></span>
 				</label> -->
+				</div>
 			</div>
 
-			<button type="submit"
-					class="btn btn-success">Save</button>
-
+			<div class="btn-container">
+				<button type="submit"
+						class="login-btn">Acceder</button>
+			</div>
 		</form>
 	</div>
 </div>
