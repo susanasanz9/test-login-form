@@ -10,6 +10,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
   innerWidth: number = 0;
+  loading: boolean = true;
 
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
       'password': new FormControl('', Validators.required),
       'remember': new FormControl(true, Validators.required),
     });
+    this.loading = false;
   }
 
   ngOnInit(): void {

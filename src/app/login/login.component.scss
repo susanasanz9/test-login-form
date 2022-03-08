@@ -21,10 +21,8 @@ $login-logo-size: 100px;
     top: $top-position*2;
     position: relative;
 	width: 70%;
+	max-width: 300px;
     margin: auto;
-	@media (min-width: $breakpoint) {
-		max-width: 300px;
-	}
 }
 .login-form {
 	background-color: white;

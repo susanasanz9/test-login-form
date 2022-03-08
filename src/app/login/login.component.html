@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container"
+	 *ngIf="!loading">
 	<ng-container *ngIf="isMobile; then loginLogo"></ng-container>
 	<div class="login-form-container">
 		<ng-container *ngIf="!isMobile; then loginLogo"></ng-container>
@@ -20,12 +21,15 @@
 			</div>
 
 			<div class="form-group">
-				<label class="switch">
+				<app-toggle></app-toggle>
+				<!-- [checked]='checked' -->
+				<!-- <app-toggle [inputFormControlName]='loginForm?.value.remember'></app-toggle> -->
+				<!-- <label class="switch">
 					<input type="checkbox"
 						   formControlName="remember"
 						   checked>
 					<span class="slider round"></span>
-				</label>
+				</label> -->
 			</div>
 
 			<button type="submit"
