@@ -1,0 +1,7 @@
+$bg-url: url('~src/assets/images/background.jpg');
+
+.container {
+	height: 100vh;
+	background-image: $bg-url;
+	background-size: cover;
+}
