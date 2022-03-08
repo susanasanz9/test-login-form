@@ -1,0 +1,8 @@
+<div class="input-form">
+	<label>{{ myLabel }}</label>
+
+	<input [value]="value"
+		   [type]="inputType"
+		   (input)="onInput(inputEl.value)"
+		   #inputEl>
+</div>

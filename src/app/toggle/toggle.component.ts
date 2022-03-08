@@ -16,4 +16,8 @@ export class ToggleComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onInput(value: any) {
+    console.log('🚀 ~ ToggleComponent ~ onInput ~ value', value.checked);
+  }
+
 }

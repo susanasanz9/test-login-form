@@ -2,6 +2,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
+import { InputFormComponent } from '../input-form/input-form.component';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -9,7 +10,7 @@ describe('LoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LoginComponent],
+      declarations: [LoginComponent, InputFormComponent],
       imports: [ReactiveFormsModule]
     })
       .compileComponents();
