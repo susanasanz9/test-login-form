@@ -15,7 +15,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class InputFormComponent implements OnInit, ControlValueAccessor {
 
-  @Input() myLabel: string = '';
+  @Input() inputLabel: string = '';
   @Input() inputType: string = 'text'; // TODO: create an enum
 
   value: string = '';

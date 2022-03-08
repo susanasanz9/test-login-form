@@ -1,8 +1,9 @@
-<div class="input-form">
-	<label>{{ myLabel }}</label>
-
-	<input [value]="value"
+<div class="input-form-group">
+	<input class="input-form"
+		   [value]="value"
 		   [type]="inputType"
 		   (input)="onInput(inputEl.value)"
+		   [placeholder]="inputLabel"
 		   #inputEl>
+	<span class="focus-border"></span>
 </div>

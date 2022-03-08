@@ -1,0 +1,44 @@
+@import '_vars';
+
+:focus {
+	outline: none;
+}
+
+.input-form-group {
+	width: 100%;
+	margin: 10px 0;
+	position: relative;
+} 
+.input-form {
+	color: $grey-dark;
+	width: 100%;
+	box-sizing: border-box;
+	letter-spacing: 1px;
+	border: 0;
+	padding: 15px 0;
+	border-bottom: 1px solid $grey-color-light;
+	font-size: 0.9rem;
+	&::placeholder {
+		margin-bottom: 6px;
+	}
+	&:focus::placeholder {
+		font-size: 70%;
+		bottom: 12px;
+		position: relative;
+		transition: 0.4s;
+	}
+}
+
+.input-form ~ .focus-border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: rgba($blue-color, 0.5);
+	transition: 0.4s;
+}
+.input-form:focus ~ .focus-border {
+	width: 100%;
+	transition: 0.4s;
+}
