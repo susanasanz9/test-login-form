@@ -1,5 +1,7 @@
 <div class="container">
+	<ng-container *ngIf="isMobile; then loginLogo"></ng-container>
 	<div class="login-form-container">
+		<ng-container *ngIf="!isMobile; then loginLogo"></ng-container>
 		<form class="login-form"
 			  [formGroup]="loginForm"
 			  (ngSubmit)="onSubmit()">
@@ -32,3 +34,9 @@
 		</form>
 	</div>
 </div>
+
+<ng-template #loginLogo>
+	<div class="login-logo"></div>
+	<p class='login-logo__title'
+	   *ngIf="!isMobile">Prueba técnica</p>
+</ng-template>

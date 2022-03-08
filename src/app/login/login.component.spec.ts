@@ -19,6 +19,8 @@ describe('LoginComponent', () => {
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    window.dispatchEvent(new Event('resize'));
+    expect(component.innerWidth).not.toBe(0);
   });
 
   it('should create', () => {
@@ -33,5 +35,11 @@ describe('LoginComponent', () => {
       remember: true
     }
     expect(loginForm.value).toEqual(mockeLoginForm);
+  });
+
+  it('should trigger onResize method when window is resized', () => {
+    const spyOnResize = spyOn(component, 'onResize');
+    window.dispatchEvent(new Event('resize'));
+    expect(spyOnResize).toHaveBeenCalled();
   });
 });

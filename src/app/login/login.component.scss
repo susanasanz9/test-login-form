@@ -1,7 +1,57 @@
+@import '_vars';
+
 $bg-url: url('~src/assets/images/background.jpg');
+$logo-url: url('~src/assets/images/logo.jpg');
+$top-position: 30px;
+$login-logo-size: 100px;
 
 .container {
 	height: 100vh;
 	background-image: $bg-url;
 	background-size: cover;
+}
+
+.login-form-container {
+	color: black;
+	display: flex;
+	padding: 30px;
+	justify-content: center;
+	flex-direction: column;
+	background-color: white;
+    top: $top-position*2;
+    position: relative;
+	width: 70%;
+    margin: auto;
+	@media (min-width: $breakpoint) {
+		max-width: 300px;
+	}
+}
+.login-form {
+	background-color: white;
+    color: black;
+    width: 100%;
+	max-width: 300px;
+    .form-group {
+		padding: 10px 20px;
+	}
+}
+
+.login-logo {
+	width: $login-logo-size;
+	height: $login-logo-size;
+	background-image: $logo-url;
+	background-size: cover;
+	margin: 0 auto;
+	position: relative;
+	top: $top-position;
+	@media (min-width: $breakpoint) {
+		top: 0;
+		&__title {
+			text-align: center;
+			font-weight: 400;
+			font-size: 1.2rem;
+		}
+	}
+
+
 }

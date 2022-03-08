@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -9,6 +9,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+  innerWidth: number = 0;
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.innerWidth = window.innerWidth;
+  }
 
   constructor() {
     this.loginForm = new FormGroup({
@@ -19,10 +25,15 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
   }
 
   onSubmit() {
     console.log(this.loginForm.value);
+  }
+
+  get isMobile(): boolean {
+    return this.innerWidth < 960;
   }
 
 }
